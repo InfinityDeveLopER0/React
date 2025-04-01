@@ -3,9 +3,11 @@ function Footer() {
         backgroundColor: "green",
     }
     return(
-        <footer style={styles}>
-            <p>All rights reserved by Leaf Node Solutions 2025.</p>
-        </footer>
+        <div className="foot">
+            <footer style={styles}>
+                <p>All rights reserved by Leaf Node Solutions 2025.</p>
+            </footer>
+        </div>
     );
 }
 

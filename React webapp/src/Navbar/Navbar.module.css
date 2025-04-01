@@ -1,10 +1,20 @@
-.navcard{
-    background-color: rgb(235, 235, 246);
+.navcard1{
+    background-color:#0a1845;
     max-width: 100%;
-    text-align: center;
+    height: fit-content;
+}
+
+.navcard2{
     display:flex;
-    justify-content: space-between;  
-    align-items: center;
-    flex-wrap: wrap;
-    
+    justify-content:start;   
+    padding: 5px;  
+}
+
+.navcard3{
+    display:flex;
+    justify-content:end;     
+}
+
+.navcard1 h2{
+    color: whitesmoke;  
 }

@@ -1,9 +1,19 @@
+html, body {
+  background-color: #0a1845; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .Abt_us {
   background-color:#108e4e;
   text-align: center;
   max-width: 100%;
   padding: 20px;
   margin: 5px;
+  font-family: 'Courier New', Courier, monospace;
 
 }
 
@@ -13,18 +23,37 @@
   max-width: 100%;
   padding: 20px;
   margin: 5px;
+}
+.Product h1{
+  color:  #ffffff;
+}
 
+
+.Product2{
+  background-color:#0a1845;
+  max-width: 100%;
+  padding: 30px;
+  display: inline-block;
+  gap: 20px;
+  margin: 5px;
+  
 }
 
 .procard{
   background-color: #ffffff;
-  width: 200px;
-  display: inline-block;
-  padding: 2px;
+  max-width: 300px;
+  padding: 10px;
   font-family: 'Courier New', Courier, monospace;
-
+  border-radius: 10px;
+  text-align: center;
+}
+.procard img{
+  width: 100%;
+  max-width: 300px;
 }
 
-.procard img{
-  width: 200px;
+.foot{
+  text-align: center;
+  height: 30px;;
+  padding: 5px 5px 0 0;
 }
