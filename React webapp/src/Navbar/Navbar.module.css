@@ -1,0 +1,7 @@
+.navcard{
+    background-color: rgb(235, 235, 246);
+    max-width: 100%;
+    text-align: center;
+    display:block;
+    justify-content: space-between;
+}
