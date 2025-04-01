@@ -1,7 +1,30 @@
 .Abt_us {
-  background-color: rgb(41, 151, 41);
+  background-color:#108e4e;
   text-align: center;
   max-width: 100%;
   padding: 20px;
+  margin: 5px;
 
+}
+
+.Product{
+  background-color:#0a1845;
+  text-align: center;
+  max-width: 100%;
+  padding: 20px;
+  margin: 5px;
+
+}
+
+.procard{
+  background-color: #ffffff;
+  width: 200px;
+  display: inline-block;
+  padding: 2px;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+.procard img{
+  width: 200px;
 }
