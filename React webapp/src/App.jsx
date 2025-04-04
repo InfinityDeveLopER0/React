@@ -12,8 +12,8 @@ function App() {
     <>
     <Navbar/>
     <About/>
-    <Products name="Portfolio Website" abt="Showcase Yourself" price="$200" img={PORT}/>
-    <Products name="Mini Project" abt="Showcase Yourself" price="$500 - $1000" img={MINI}/>
+    <Products name="Portfolio Website" abt="Showcase Yourself" price="$200" img={PORT} login = {true}/>
+    <Products name="Mini Project" abt="Showcase Yourself" price="$500 - $1000" img={MINI} login = {true}/>
     <Products name="Buisness Website" abt="Showcase Yourself" price="$1000 - $2000" img={BUISS}/>
     <Footer/>
     </>
