@@ -26,6 +26,7 @@ function Products(props) {
                     <p> {props.abt}</p>
                     <h5>{discount}</h5>
                     <button onClick={ ()=>applydiscount("leafnode")}>Apply Discount</button>
+                    <button onClick={ ()=>props.delete(props.id)}>Delete</button>
                     <button onClick={ ()=>Buttonclick("leafnode")}>Buy Now</button>
                     <p>{purchased? "Succesfully Purchased" : "Click To Get It"}</p>
                 </div>
