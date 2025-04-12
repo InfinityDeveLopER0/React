@@ -1,10 +1,19 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 function Products(props) {
 
+    const [purchased, setPurchased] = useState(false);
+
     function Buttonclick(mail){
         console.log("78979705395",mail,"To mail us")
+        setPurchased(true)
     }
+
+    function applydiscount(){
+        
+    }
+    
     if(props.login){
         return (
             <>
@@ -14,7 +23,9 @@ function Products(props) {
                     <h4>{props.name}</h4>
                     <p> {props.abt}</p>
                     <h5>{props.price}</h5>
-                    <button onClick={ ()=>Buttonclick("leafnode")}>Contact Us</button>
+                    <button onClick={ ()=>applydiscount("leafnode")}>Apply Discount</button>
+                    <button onClick={ ()=>Buttonclick("leafnode")}>Buy Now</button>
+                    <p>{purchased? "Succesfully Purchased" : "Click To Get It"}</p>
                 </div>
             </div>
             </>
