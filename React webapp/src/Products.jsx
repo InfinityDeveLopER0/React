@@ -5,13 +5,15 @@ function Products(props) {
 
     const [purchased, setPurchased] = useState(false);
 
+    const [discount, setDiscount] = useState(props.price)
+
     function Buttonclick(mail){
         console.log("78979705395",mail,"To mail us")
         setPurchased(true)
     }
 
     function applydiscount(){
-        
+        setDiscount(discount-100)
     }
     
     if(props.login){
@@ -22,7 +24,7 @@ function Products(props) {
                     <img src={props.img}/>
                     <h4>{props.name}</h4>
                     <p> {props.abt}</p>
-                    <h5>{props.price}</h5>
+                    <h5>{discount}</h5>
                     <button onClick={ ()=>applydiscount("leafnode")}>Apply Discount</button>
                     <button onClick={ ()=>Buttonclick("leafnode")}>Buy Now</button>
                     <p>{purchased? "Succesfully Purchased" : "Click To Get It"}</p>
