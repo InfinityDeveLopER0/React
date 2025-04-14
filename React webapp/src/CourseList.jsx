@@ -1,7 +1,7 @@
 import port from './assets/port.png';
 import mini from './assets/mini.webp';
 import Products from './Products';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function CourseList(){
 
@@ -31,6 +31,10 @@ function CourseList(){
             login:true
        }
     ]);
+
+    useEffect(()=> {
+        console.log("Use effect called");
+    },[]);
 
     function Delete(id){
         const UpdatedList = courses.filter((course)=> course.id != id)

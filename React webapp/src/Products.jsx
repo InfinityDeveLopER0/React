@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function Products(props) {
 
-    const [purchased, setPurchased] = useState(false);
+    const [purchased, setPurchased] = useState(false); //Declaring a set variable for usestate
 
     const [discount, setDiscount] = useState(props.price)
 
@@ -28,7 +28,7 @@ function Products(props) {
                     <button onClick={ ()=>applydiscount("leafnode")}>Apply Discount</button>
                     <button onClick={ ()=>props.delete(props.id)}>Delete</button>
                     <button onClick={ ()=>Buttonclick("leafnode")}>Buy Now</button>
-                    <p>{purchased? "Succesfully Purchased" : "Click To Get It"}</p>
+                    <p>{purchased? "SuccesfullY Purchased" : "Click To Get It"}</p>
                 </div>
             </div>
             </>
