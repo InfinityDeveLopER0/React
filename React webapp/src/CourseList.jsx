@@ -6,40 +6,43 @@ function CourseList(){
 
     const[courses, setCourses] = useState([
         {
-             id:1, 
-             name:"Mini Project",
-             abt:"Showcase Yourself",
-             price:1000,
-             img:mini, 
-             login:false
-        },
-        {
-            id:2,
-            name:"Landing Page",
-            abt:"Single page website",
-            price:400,
+            id:1, 
+            name:"Mini Project",
+            abt:"Showcase Yourself",
+            price:1000,
             img:mini, 
-            login:true
-       }
+            login:false
+       },
+       {
+           id:2,
+           name:"Landing Page",
+           abt:"Single page website",
+           price:400,
+           img:mini, 
+           login:true
+      }
     ]);
+
+    const[error, setError] = useState(null);
 
     useEffect(()=> {
         console.log("Use effect called");
 
-        fetch("https://jsonplaceholder.typicode.com/todos")
-        .then(response=>{
-            console.log(response);
-            return response.json()
-        }).then(datas=>{
-            console.log(datas);
-        })
+       
 
         fetch("http://localhost:3000/courses")
         .then(response=>{
+            if(!response.ok){
+                throw error("Data Not Found");
+            }
             console.log(response);
             return response.json()
         }).then(proda=>{
             setCourses(proda);
+        })
+        .catch((error)=>{
+            console.log(error.message)
+            setError(error.message);
         })
     },[]);
 
@@ -53,7 +56,11 @@ function CourseList(){
     const ProList2 = courses.filter((PriceList)=> PriceList.price<200)
 
     if(!courses){
-        return <></>
+        return (
+            <>
+            <p>{error.message}</p>
+            </>
+        )
     }
     
     const ProList = courses.map(
