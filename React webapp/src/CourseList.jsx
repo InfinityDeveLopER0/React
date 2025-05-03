@@ -34,6 +34,14 @@ function CourseList(){
 
     useEffect(()=> {
         console.log("Use effect called");
+
+        fetch("https://jsonplaceholder.typicode.com/todos")
+        .then(response=>{
+            console.log(response);
+            return response.json()
+        }).then(datas=>{
+            console.log(datas);
+        })
     },[]);
 
     function Delete(id){
