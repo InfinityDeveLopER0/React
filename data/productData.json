@@ -1,0 +1,25 @@
+{
+    "courses":[
+        {
+            "id":1,
+            "name" :"Portfolio Website",
+            "abt":"Showcase Yourself",
+            "price": 200,
+            "img": "http://localhost:3000/assets/port.png", 
+            "login":true
+       },
+       {
+        "id":2,
+        "name":"Service provider Page",
+        "abt":"Single page website",
+        "price":600,
+        "img":"http://localhost:3000/assets/service.png", 
+        "login":true
+       }
+
+    ]
+}
+
+
+
+

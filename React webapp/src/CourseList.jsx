@@ -1,4 +1,3 @@
-import port from './assets/port.png';
 import mini from './assets/mini.webp';
 import Products from './Products';
 import { useState, useEffect } from 'react';
@@ -7,15 +6,7 @@ function CourseList(){
 
     const[courses, setCourses] = useState([
         {
-             id:1,
-             name :"Portfolio Website",
-             abt:"Showcase Yourself",
-             price: 200,
-             img: port, 
-             login:true
-        },
-        {
-             id:2, 
+             id:1, 
              name:"Mini Project",
              abt:"Showcase Yourself",
              price:1000,
@@ -23,7 +14,7 @@ function CourseList(){
              login:false
         },
         {
-            id:3,
+            id:2,
             name:"Landing Page",
             abt:"Single page website",
             price:400,
@@ -42,6 +33,14 @@ function CourseList(){
         }).then(datas=>{
             console.log(datas);
         })
+
+        fetch("http://localhost:3000/courses")
+        .then(response=>{
+            console.log(response);
+            return response.json()
+        }).then(proda=>{
+            setCourses(proda);
+        })
     },[]);
 
     function Delete(id){
@@ -52,6 +51,10 @@ function CourseList(){
     courses.sort((x,y) => y.price-x.price)
 
     const ProList2 = courses.filter((PriceList)=> PriceList.price<200)
+
+    if(!courses){
+        return <></>
+    }
     
     const ProList = courses.map(
     (pro)=> <Products id={pro.id}
